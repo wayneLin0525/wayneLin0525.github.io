@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python,数据分析,可视化,">
+  <meta name="keywords" content="数据分析,可视化,Python,">
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="最近一段时间一直在学习 Python 爬虫、数据分析和数据可视化，想通过一个项目对这些知识做一下整体的运用和总结，所以参考了网络上文章上几篇文章的思路通过数据抓取、数据清洗、数据分析、数据可视化一整个数据分析的流程简单地完成了这篇分析文。  为什么选择虎嗅网进行分析呢？  主要是因为虎嗅网创办于2012年5月，根据下面的分析我们可以知道网站发布第一篇文章的时间是在2012年4月3号。它是一个聚合优">
-<meta name="keywords" content="Python,数据分析,可视化">
+<meta name="keywords" content="数据分析,可视化,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="虎嗅网 5 万篇文章数据分析">
 <meta property="og:url" content="http://yoursite.com/2019/07/21/虎嗅网 5 万篇数据分析/index.html">
@@ -96,7 +96,7 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/b4547f9bgy1g56q0bhi0pj20m80dtmxs.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/b4547f9bgy1g56qcfzeibj20m80dtt9h.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/b4547f9bgy1g56qxsuxxjj20m80dtgrt.jpg">
-<meta property="og:updated_time" content="2019-07-20T17:28:40.970Z">
+<meta property="og:updated_time" content="2019-07-21T08:15:12.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虎嗅网 5 万篇文章数据分析">
 <meta name="twitter:description" content="最近一段时间一直在学习 Python 爬虫、数据分析和数据可视化，想通过一个项目对这些知识做一下整体的运用和总结，所以参考了网络上文章上几篇文章的思路通过数据抓取、数据清洗、数据分析、数据可视化一整个数据分析的流程简单地完成了这篇分析文。  为什么选择虎嗅网进行分析呢？  主要是因为虎嗅网创办于2012年5月，根据下面的分析我们可以知道网站发布第一篇文章的时间是在2012年4月3号。它是一个聚合优">
@@ -400,13 +400,13 @@
 <p>为什么选择虎嗅网进行分析呢？</p>
 </blockquote>
 <p>主要是因为虎嗅网创办于2012年5月，根据下面的分析我们可以知道网站发布第一篇文章的时间是在2012年4月3号。它是一个聚合优质创新信息与人群的新媒体平台，这个平台专注于贡献原创、深度、犀利优质的商业资讯、围绕创新创业的观点剖析与交流。经过这几年的发展，个人认为虎嗅上面还是积累了不少的好文章，所以这次打算去一探究竟。</p>
-<a id="more"></a>
-
 <h5 id="1、数据抓取"><a href="#1、数据抓取" class="headerlink" title="1、数据抓取"></a>1、数据抓取</h5><p>通过 Python 的 pyspider 框架对虎嗅网进行抓取，pyspider 是一个可视化界面，可以看到爬虫运行的整个过程和具体进度。</p>
 <p><img src="https://ws1.sinaimg.cn/large/b4547f9bgy1g5647muwl4j21h50cy0te.jpg" alt="pyspider web界面"></p>
 <p>爬虫最终的数据是保存在数据库 MongoDB 中，也可以再把数据输出为 csv 格式。</p>
 <p><img src="https://ws1.sinaimg.cn/large/b4547f9bgy1g564tv9qt5j20w108vmyo.jpg" alt="部分数据截图"><br><img src="https://ws1.sinaimg.cn/large/b4547f9bgy1g564pnqaunj20wi06vwfp.jpg" alt></p>
 <p>可以看到这里抓取了虎嗅网的主页文章，文章抓取时间为 2012 年开始至 2019 年 6 月 22 日，共计有 5 万多篇文章。抓取了 7 个字段信息：摘要、评论数、收藏数、作者名、文章标题、文章链接和发文时间。</p>
+<a id="more"></a>
+
 <h5 id="2、数据清洗"><a href="#2、数据清洗" class="headerlink" title="2、数据清洗"></a>2、数据清洗</h5><p>获取数据之后首先看一下数据的总体情况，一般要对数据进行整理，删除不需要的字段，增加一些我们分析需要的字段。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data.shape    #查看行数和列数</span><br><span class="line">data.info()    #查看总体情况</span><br><span class="line">data.head() #输出前5行</span><br></pre></td></tr></table></figure>
 
@@ -704,11 +704,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
-          
             <a href="/tags/数据分析/" rel="tag"># 数据分析</a>
           
             <a href="/tags/可视化/" rel="tag"># 可视化</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -717,6 +717,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/21/Tableau选餐厅BI看板/" rel="prev" title="Tableau选餐厅BI看板">
+                Tableau选餐厅BI看板 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -790,7 +806,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -801,7 +817,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -812,7 +828,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -921,7 +937,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.9k字</span>
+  <span class="post-count">博客全站共3.6k字</span>
 </div>
         
 
